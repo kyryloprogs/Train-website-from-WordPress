@@ -149,19 +149,25 @@ h2.title {
     text-align: center;
 }
 
+/* ОБЕРТКИ и FLEX https://html5.by/blog/flexbox/ */
 .waiting .waiting_wrapper {
     
     margin-top: 45px;
+    display: flex; /* Вывод с порядком по горизонтали */
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap; /* Если не поместилось - перемещаем внизу */
 }
 
 .waiting .waiting_wrapper .waiting_img .waiting_img{
     width: 100%; 
 }
 .waiting .waiting_wrapper .waiting_item{
-    display: inline-block;
+    /* display: inline-block; */
     width: 339px;
     text-align: center;
-    vertical-align: top;
+    /* vertical-align: top; */
     margin: 0 15px;
 }
 
