@@ -4,6 +4,14 @@
     padding: 0;
 }
 
+html {
+    font-family: 'Roboto', sans-serif;
+}
+
+.none {
+    display: none !important;
+}
+
 .promo {
     padding: 39px 0 62px 0;
     height: 800px;
@@ -13,15 +21,17 @@
 .container {
     width: 1140px;
     margin: 0 auto;
+    position: relative;
 }
 
 .logo .logo_img {
     display: block;
     margin: 0 auto;
 }
+
 .logo_text {
     color: #ffffff;
-    font-family: Roboto;
+    /* font-family: Roboto; */
     font-size: 15px;
     font-weight: 500;
     line-height: 24px;
@@ -30,25 +40,25 @@
     margin-top: 15px;
 }
 
-h1{
+h1 {
     margin-top: 53px;
 }
 
 .title {
     color: #f9bf3b;
-    font-family: "Roboto - Black";
+    /* font-family: 'Roboto Black', sans-serif; */
     font-size: 41px;
-    font-weight: 400;
-    line-height: 24px;
+    font-weight: 900;
+    line-height: 1;
     text-transform: uppercase;
     text-align: center;
 }
 
 .simple .title_big {
     color: #ffffff;
-    font-family: "Roboto - Black";
-    font-size: 41px;
-    font-weight: 400;
+    /* font-family: "Roboto - Black"; */
+    font-size: 80px;
+    font-weight: 900;
     /* line-height: 24px; */
     text-transform: uppercase;
     text-align: center;
@@ -62,7 +72,7 @@ h2.title {
 .promo .promo_text {
     padding: 0 13px;
     color: #ffffff;
-    font-family: "Roboto";
+    /* font-family: "Roboto"; */
     font-size: 21px;
     font-weight: 300;
     line-height: 28px;
@@ -71,13 +81,13 @@ h2.title {
     margin-top: 23px;
 }
 
-.promo .promo_text span{
+.promo .promo_text span {
     color: #f9bf3b;
-    font-family: "Roboto - Bold";
+    /* font-family: "Roboto - Bold"; */
     font-weight: 700;
 }
 
-.promo .promo_btn {
+/* .promo .promo_btn {
     display: block;
     margin: 73px auto;
     width: 313px;
@@ -94,6 +104,53 @@ h2.title {
     text-transform: uppercase;
     cursor: pointer;
     outline: none;
+} */
+
+.promo_btn {
+    display: block;
+    margin: 55px auto;
+    width: 331px;
+    height: 72px;
+    box-shadow: inset 0 0 rgba(0, 0, 0, 0.18);
+    border: 4px solid rgba(0, 0, 0, 0.23);
+    background-image: linear-gradient(to top, #2798b9 0%, #3ab6da 100%);
+
+    color: #ffffff;
+    font-family: inherit;
+    font-size: 21px;
+    font-weight: 400;
+    line-height: 24px;
+    text-transform: uppercase;
+    cursor: pointer;
+    outline: none;
+
+    transition: all 0.5s;
+}
+
+
+.promo_btn span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+}
+
+.promo_btn span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+}
+
+.promo_btn:hover span {
+    padding-right: 25px;
+}
+
+.promo_btn:hover span:after {
+    opacity: 1;
+    right: 0;
 }
 
 .more {
@@ -104,9 +161,9 @@ h2.title {
 .more .more_text {
     text-align: center;
     color: #ffffff;
-    font-family: "Roboto - Thin";
+    /* font-family: "Roboto - Thin"; */
     font-size: 15px;
-    font-weight: 400;
+    font-weight: 100;
     line-height: 24px;
     text-transform: uppercase;
 }
@@ -118,14 +175,14 @@ h2.title {
 }
 
 .waiting {
-    height: 604px;
+    min-height: 604px;
     background-color: #efefef;
     padding: 85px 0 75px 0;
 }
 
-.waiting .waiting_header{
+.waiting .waiting_header {
     color: #252525;
-    font-family: Roboto;
+    /* font-family: Roboto; */
     font-size: 30px;
     font-weight: 400;
     text-transform: uppercase;
@@ -151,19 +208,22 @@ h2.title {
 
 /* ОБЕРТКИ и FLEX https://html5.by/blog/flexbox/ */
 .waiting .waiting_wrapper {
-    
+
     margin-top: 45px;
-    display: flex; /* Вывод с порядком по горизонтали */
+    display: flex;
+    /* Вывод с порядком по горизонтали */
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    flex-wrap: wrap; /* Если не поместилось - перемещаем внизу */
+    flex-wrap: wrap;
+    /* Если не поместилось - перемещаем внизу */
 }
 
-.waiting .waiting_wrapper .waiting_img .waiting_img{
-    width: 100%; 
+.waiting .waiting_wrapper .waiting_img .waiting_img {
+    width: 100%;
 }
-.waiting .waiting_wrapper .waiting_item{
+
+.waiting .waiting_wrapper .waiting_item {
     /* display: inline-block; */
     width: 339px;
     text-align: center;
@@ -171,7 +231,7 @@ h2.title {
     margin: 0 15px;
 }
 
-.waiting .waiting_wrapper .waiting_item .waiting_descr{
+.waiting .waiting_wrapper .waiting_item .waiting_descr {
     margin-top: 33px;
     color: #4a4a4a;
     font-family: Roboto;
@@ -179,6 +239,173 @@ h2.title {
     font-weight: 400;
     line-height: 21px;
 }
+
+.optimization {
+    min-height: 550px;
+    padding: 102px 0 107px 0;
+    background-image: url('./../img/girl.png');
+    background-repeat: no-repeat;
+    background-position: -154px;
+}
+
+.optimization .optimization_header {
+    margin-left: 391px;
+    color: #299cbd;
+    /* font-family: "Roboto - Black"; */
+    font-size: 30px;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+.optimization .optimization_text {
+    margin-top: 25px;
+    margin-left: 391px;
+    color: #4a4a4a;
+    font-size: 17px;
+    font-weight: 300;
+    line-height: 27px;
+    /* font-family: "Roboto Light"; */
+    font-weight: 300;
+}
+
+.optimization .optimization_text span {
+    /* font-family: "Roboto - Bold"; */
+    font-weight: 700;
+}
+
+.optimization .optimization_img {
+    position: absolute;
+    top: -54px;
+    left: -240px;
+    z-index: -1;
+}
+
+.finish {
+    min-height: 447px;
+    padding: 86px 0 79px 0;
+    background: url("../img/bg/second_bg.png") center center/cover no-repeat;
+}
+
+.finish .finish_header {
+    color: #ffffff;
+    /* font-family: Roboto; */
+    font-size: 30px;
+    font-weight: 400;
+    /* line-height: 12px; */
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.finish .finish_wrapper {
+    margin-top: 41px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.finish .finish_wrapper .finish_item {
+    width: 204px;
+}
+
+.finish .finish_wrapper .finish_item .finish_round {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    width: 115px;
+    height: 115px;
+    background-color: #b4e2ff;
+    border-radius: 100%;
+}
+
+.finish .finish_wrapper .finish_item .finish_descr {
+    margin-top: 25px;
+    text-align: center;
+    color: #efefef;
+    font-family: Roboto;
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 20px;
+}
+
+.gift {
+    min-height: 628px;
+    background-color: #efefef;
+    padding: 86px 0 87px 0;
+}
+
+.gift .gift_img {
+    display: block;
+    margin: 0 auto;
+}
+
+.gift .gift_offer {
+    margin-top: 42px;
+    color: #252525;
+    /* font-family: Roboto; */
+    font-size: 30px;
+    font-weight: 400;
+    line-height: 43px;
+    text-align: center;
+}
+
+.webinar {
+    min-height: 515px;
+    padding: 89px 0 64px 0;
+}
+
+.webinar .webinar_img {
+    display: block;
+    margin: 0 auto;
+}
+
+.webinar .webinar_text {
+    margin-top: 37px;
+    color: #252525;
+    /* font-family: Roboto; */
+    font-size: 30px;
+    font-weight: 400;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.webinar .data {
+    margin-top: 30px;
+    color: #299cbd;
+    /* font-family: "Roboto - Black"; */
+    font-size: 36px;
+    font-weight: 900;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.webinar .calling_text {
+    margin-top: 25px;
+    color: #4a4a4a;
+    /* font-family: Roboto; */
+    font-size: 23px;
+    font-weight: 400;
+    text-align: center;
+}
+
+.footer {
+    padding-top: 61px;
+    min-height: 166px;
+    background-color: #1a1a1a;
+}
+
+.footer .footer_text {
+    color: #888888;
+    /* font-family: Roboto; */
+    font-size: 15px;
+    font-weight: 300;
+    line-height: 21px;
+    text-align: center;
+}
+
+.footer .footer_text a {
+    color: #888888;
+}
+
 /* .promo .promo_btn:hover {
     background-image: none;
 } */
