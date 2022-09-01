@@ -153,7 +153,7 @@ h2.title {
 
 .more {
     margin-top: 73px;
-    animation: superslider 1s ease-in-out 0s infinite alternate none  ;
+    animation: superslider 0.7s ease-in-out 0s infinite alternate none  ;
 }
 
 .more .more_text {
@@ -174,15 +174,17 @@ h2.title {
 
 @keyframes superslider {
     0% {
-        border-top: 73px;
+        /* border-top: 73px; */
+        transform: translate3d(0, 0, 0);
     }
 
     100% {
-        margin-top: 100px;
+        transform: translate3d(0, 15px, 0);
+        /* margin-top: 100px; */
     }
   
     0% {
-        margin-top: 73px;
+        /* margin-top: 73px; */
     }
 }
 
